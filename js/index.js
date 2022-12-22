@@ -1,3 +1,96 @@
+import $ from 'jquery'
+
+$(function(){
+    // $('#box02').css('background-color','pink') 연결 됐는지 확인 차
+    let windowW = $(window).width();
+    if(windowW >= 1160){
+        nav()
+        submenu()
+        top()
+    }
+    else if(windowW < 1160 && windowW >=980){
+        nav()
+        submenu()
+        top()
+    }
+    else if(windowW < 980 && windowW >= 580){
+        tNav()
+    }
+    else if(windowW < 580){
+        tNav()
+    }
+    // 공통
+
+    // reset
+})
+
+// web용 nav
+function nav(){
+    $('nav li>a').on('click',function(e){
+        let navA = $(this).attr('href')
+        let aPos = $(navA).offset().top;
+        let headerH = $('header').innerHeight();  // height 은 padding댐에 정확한 높이 나오지 않음
+        $('html,body').animate({scrollTop: aPos - headerH},400)
+        return false;
+    })
+}
+// tablet,mobile용 nav
+function tNav(){
+    let navW = $('nav').width();
+
+    // .btn click
+    $('header .btn').on('click',function(e){
+        $(this).hide();
+        $('nav').animate({left:0},400)
+    })
+    // scroll
+    $('nav li>a').on('click',function(e){
+        let navA = $(this).attr('href')
+        let aPos = $(navA).offset().top;
+        let headerH = $('header').innerHeight();  // height 은 padding댐에 정확한 높이 나오지 않음
+        $('html,body').animate({scrollTop: aPos - headerH},400)
+        $('nav').css('left','-'+navW+'px')
+        $('header .btn').show();
+        return false;
+    })
+    // close
+    $('nav .close').on('click',function(e){
+        $('nav').css('left','-'+navW+'px');
+    })
+}
+
+function submenu(){
+    // html 연결
+    $('#submenu li>a').on('click',function(e){
+        let subA = $(this).attr('href')
+        let aPos = $(subA).offset().top;
+        $('html,body').animate({scrollTop:aPos},400)
+        return false
+    })
+    // jquery
+}
+
+function top(){
+    $('#top>a').on('click',function(e){
+        let topA = $(this).attr('href')
+        let aPos = $(topA).offset().top;
+        $('html,body').animate({scrollTop:aPos},400)
+        return false 
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 // DOM object
 const h4 = document.querySelector('#modal h4');
 const img = document.querySelector('#modal figure>img');

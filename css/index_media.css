@@ -35,6 +35,7 @@ article h3{
   header>div>h1>a{
     font-size:35px;
   }
+  header>p.btn{display: flex;}
   nav{
     position:fixed;
     left:-400px; top:0;
@@ -71,7 +72,7 @@ article h3{
     font-size:65px;
   }
   #box01>ul{
-    width:100%;
+    width:100vw;
     bottom:9.99vh;
     /* bottom:14.5%; */
     left:0;
@@ -396,7 +397,7 @@ p.next{
 
 @media screen and (max-width:980px){
  #modal{
-  display:block;
+  /* display:block; */
   padding:6.66vh 5vw 3.333vh;
   box-sizing:border-box;}
  #modal>.close{
