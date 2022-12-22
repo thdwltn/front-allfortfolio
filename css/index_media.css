@@ -77,15 +77,17 @@ article h3{
     /* bottom:14.5%; */
     left:0;
     margin-left:0;
+    justify-content: space-evenly;
   }
   #box01>ul>li{
-    width:33.33333vw;
+    width:30vw;
   }
   #box01>ul>li>span{
     width:26.64vw;
     height:26.64vw;
 
   }
+  
   #box01>ul>li>dl{
     width:26.64vw;
   }
@@ -165,7 +167,7 @@ p.next{display:block;}
   overflow:hidden;
 }
 #all{
-  width:219.78vw;
+  width:260vw;
   /* display:flex;
   flex-wrap:wrap; */
 }
@@ -351,7 +353,8 @@ p.next{
 #show{
   width:60vw;
   margin: 0 auto;
-  overflow:hidden;}
+  overflow:hidden;
+}
 #all{
   width:360vw;}
 #all>figure{

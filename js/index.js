@@ -3,6 +3,7 @@ import $ from 'jquery'
 $(function(){
     // $('#box02').css('background-color','pink') 연결 됐는지 확인 차
     let windowW = $(window).width();
+    console.log(windowW)
     if(windowW >= 1160){
         nav()
         submenu()
@@ -15,13 +16,22 @@ $(function(){
     }
     else if(windowW < 980 && windowW >= 580){
         tNav()
+        submenu()
+        gallery()
     }
     else if(windowW < 580){
         tNav()
+        gallery()
+        formData()
     }
     // 공통
 
-    // reset
+    // reset : 포폴용 
+    $(window).on('resize',function(e){
+        window.location.reload();
+    })
+
+
 })
 
 // web용 nav
@@ -64,8 +74,14 @@ function submenu(){
     $('#submenu li>a').on('click',function(e){
         let subA = $(this).attr('href')
         let aPos = $(subA).offset().top;
-        $('html,body').animate({scrollTop:aPos},400)
-        return false
+        let hdTop = $('header').innerHeight();
+        $('html,body').animate({scrollTop:aPos - hdTop},400)
+        return false // 낮은버전에 문제 생길까바 해주는
+    })
+    $('#submenu li>a').on('mousedown',function(e){
+        $(this).css('background-color','rgba(22, 22, 227, 0.624)')
+    }).on('mouseup',function(e){
+        $(this).css('background-color','#fff')
     })
     // jquery
 }
@@ -77,15 +93,52 @@ function top(){
         $('html,body').animate({scrollTop:aPos},400)
         return false 
     })
+    
 }
 
+function gallery(){
+    // 1. 준비하기 figure 가로사이즈
+    const figureW = $('#box03 #all figure').width();
+    $('#all figure:last').prependTo('#all')
+    $('#all').css('margin-left','-'+figureW+'px')
+    // 2. prev click -> figure 1개씩 animate <- 방향(이동,스타일변경)
+    $('.next').on('click',function(e){
+        $('#all').animate({marginLeft:'-='+figureW+'px'},400,function(){
+            $('#all figure:first').appendTo('#all');
+            $('#all').css('margin-left','-'+figureW+'px');
+            
+        })
+    })
+    // 3. next click -> figure 1개씩 animate -> 방향(이동,스타일변경)
+    $('.prev').on('click',function(e){
+        $('#all').animate({marginLeft:'+='+figureW+'px'},400,function(){
+            $('#all figure:last').prependTo('#all');
+            $('#all').css('margin-left','-'+figureW+'px');
+        })
+    })
+}
 
-
-
-
-
-
-
+function formData(){
+    // 모바일 설정. 
+    // placeholder
+    // 선언 liform 선택자 두개넣기
+    const liForm = $('#box04 li>input,#box04 li>textarea');
+    $(liForm).removeAttr('placeholder');
+    $(liForm).on('focus',function(e){
+        $(this).prev('label').fadeOut(300)
+    })
+    $(liForm).on('blur',function(e){
+        
+        let str = $(liForm).val();
+        if(str === ''){
+            $(this).prev('label').fadeIn(300)
+        }
+    })
+    // 값이 있느냐 없느냐에 따라서 fadeIn str 선언
+   
+    // 조건문(str 값이 없으면 -> label fadeIn)
+    // val() === ''
+}
 
 
 
@@ -96,7 +149,7 @@ const h4 = document.querySelector('#modal h4');
 const img = document.querySelector('#modal figure>img');
 const day = document.querySelector('#modal dl .year');
 const pro = document.querySelector('#modal dl .program');
-const url = document.querySelector('#modal dl .linl>a');
+const url = document.querySelector('#modal dl .link>a');
 const content = document.querySelector('#modal dl .text');
 // 객체 생성자 함수 (Modal) title,pic,year,program,href,text
 
@@ -123,12 +176,12 @@ content.innerHTML = this.text;
 }
 // 인스턴스(6개)
 let myModal = [
-    new Modal('title1','./images/pic01.png','2022','프로그램1','http://aaa1.com','내용1'),
-    new Modal('title2','./images/pic02.png','2022','프로그램2','http://aaa2.com','내용2'),
-    new Modal('title3','./images/pic03.png','2022','프로그램3','http://aaa3.com','내용3'),
-    new Modal('title4','./images/pic04.png','2022','프로그램4','http://aaa4.com','내용4'),
-    new Modal('title5','./images/pic01.png','2022','프로그램5','http://aaa5.com','내용5'),
-    new Modal('title6','./images/pic02.png','2022','프로그램6','http://aaa6.com','내용6')
+    new Modal('title1','./images/java.png','2022','프로그램1','http://aaa1.com','내용1'),
+    new Modal('title2','./images/intelliJ.png','2022','프로그램2','http://aaa2.com','내용2'),
+    new Modal('title3','./images/springboot.png','2022','프로그램3','http://aaa3.com','내용3'),
+    new Modal('title4','./images/react','2022','프로그램4','http://aaa4.com','내용4'),
+    new Modal('title5','./images/nodeJs.png','2022','프로그램5','http://aaa5.com','내용5'),
+    new Modal('title6','./images/vsc.png','2022','프로그램6','http://aaa6.com','내용6')
 ]
 
 // event => 작업 -> click -> figure>img, #modal>.close 
