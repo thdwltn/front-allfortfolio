@@ -14,7 +14,7 @@
     width:100%;
     margin-left:-50%;
   }
-
+  header>div>h1{margin-left: 100px;}
 }
 /* 980 : 42 */
 @media screen and (min-width:580px) and (max-width:979px){
@@ -36,6 +36,9 @@ article h3{
     font-size:35px;
   }
   header>p.btn{display: flex;}
+  header>p.btn-left{
+    display:none;
+  }
   nav{
     position:fixed;
     left:-400px; top:0;
@@ -173,11 +176,17 @@ p.next{display:block;}
 }
 #all>figure{
   width:36.63vw;
+  padding: 20px 0;
   margin-bottom:0;
   text-align:center;
 }
 #all>figure>img{
-  width:29.9vw;
+  width:20vw;
+  transform:scale(1.1);  
+}
+#all>figure>img:hover{
+  transform:none;  
+  box-shadow:  2px 2px 15px rgba(22, 22, 227, 0.624);
 }
 #all>figure>figcaption{}
 /* 33 */
@@ -234,6 +243,9 @@ form p>input{
   }
   header>div>h1{
     text-align:center;
+  }
+  header>p.btn-left{
+    display:none;
   }
 nav{
   position:fixed;

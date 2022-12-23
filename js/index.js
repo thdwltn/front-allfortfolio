@@ -8,11 +8,13 @@ $(function(){
         nav()
         submenu()
         top()
+        header()
     }
     else if(windowW < 1160 && windowW >=980){
         nav()
         submenu()
         top()
+        header()
     }
     else if(windowW < 980 && windowW >= 580){
         tNav()
@@ -66,6 +68,7 @@ function tNav(){
     // close
     $('nav .close').on('click',function(e){
         $('nav').css('left','-'+navW+'px');
+        $('header .btn').show();
     })
 }
 
@@ -140,7 +143,19 @@ function formData(){
     // val() === ''
 }
 
-
+function header(){
+    
+    $(window).on('scroll',function(e){
+        let scrValue = $(this).scrollTop();
+        // console.log(scrValue);
+        let headerH = $('header').outerHeight();
+        if(scrValue>headerH){
+            $('header').css('display','none')}
+            else{
+                    $('header').css('display','block')
+                }
+    })
+}
 
 
 
