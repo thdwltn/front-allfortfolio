@@ -80,7 +80,8 @@ nav .close{
   position:absolute;
   right:35px; top:35px;
   width:35px; height:35px;
-  background-color:red;
+  background-color: #fff;
+  border-radius: 50%;
 }
 /* btn */
 header>p.btn{
@@ -98,6 +99,7 @@ header>p.btn>span{
   height:2px;
   width:100%;
   background-color:#fff;
+  
 }
 header>p.btn-left{
   position:absolute;
@@ -114,6 +116,7 @@ header>p.btn-left>span{
   height:2px;
   width:100%;
   background-color:#fff;
+  
 }
 
 /* box01 */
@@ -305,6 +308,101 @@ width:63.10344827586207%/* 732px */;
 #box02 section.skill>ul>li:nth-child(5)>span{
   background-size:80% 100%;
 }
+
+/* box2-1 */
+
+#box02-1{
+  padding-top: 74px;
+  background: rgb(239,247,249);
+  background: rgb(239,247,249);
+  background: -moz-linear-gradient(top,  rgba(239,247,249,1) 0%, rgba(191,208,255,1) 100%);
+  background: -webkit-linear-gradient(top,  rgba(239,247,249,1) 0%,rgba(191,208,255,1) 100%);
+  background: linear-gradient(to bottom,  rgba(239,247,249,1) 0%,rgba(191,208,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eff7f9', endColorstr='#bfd0ff',GradientType=0 );
+z-index: 1;
+box-shadow: 2px 2px 4px #000;
+}
+#box02-1>div{
+  width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+#box02-1>h3{
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 40px;
+  font-family: 'Tiro Devanagari Sanskrit', serif;
+  text-shadow: 2px 2px 4px #666;
+}
+#ex{
+  
+  margin-right: 180px;
+  width: 560px;
+  word-break:break-all;
+  padding: 0px 0 90px;
+  margin-bottom: 80px;
+}
+#ex>h4{
+  font-size: 24px;
+  margin-bottom: 60px;
+  font-family: 'Barlow', sans-serif;
+}
+#ex>p{
+  font-size: 12px;
+  line-height: 30px;
+  font-family: 'Playfair Display', serif;
+}
+#box02-1 #skillAll{
+ padding: 20px 0;
+  position: relative;
+  width: 700px;
+  overflow: hidden;
+}
+#box02-1 #skillAll>p{
+  position: absolute;
+  top: 40%;
+  z-index: 100;
+}
+#box02-1 #skillAll>#prev{
+  left: 5px;
+ 
+}
+#box02-1 #skillAll>#next{
+  right: 5px;
+}
+
+#box02-1 #skillView{
+  padding: 20px 0;
+  width: 660px; height: 200px;
+  display: flex;
+}
+#box02-1 .page{
+  width: 2000px; height: 200px;
+  display: block; 
+  text-align: center;
+}
+  
+#box02-1 .page>ul{
+  margin: 0 5px;
+  width: 660px; height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+#box02-1 .page>ul>li{
+  border: 2px solid #999;
+  padding: 15px;
+  box-sizing: border-box;
+  margin: 0 8.5px 17px;
+}
+
+
+
+
 
 /* #box03 */
 

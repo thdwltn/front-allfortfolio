@@ -8,23 +8,27 @@ $(function(){
         nav()
         submenu()
         top()
-        header()
+        // header()
+        slide()
     }
     else if(windowW < 1160 && windowW >=980){
         nav()
         submenu()
         top()
         header()
+        slide()
     }
     else if(windowW < 980 && windowW >= 580){
         tNav()
         submenu()
         gallery()
+        slide()
     }
     else if(windowW < 580){
         tNav()
         gallery()
         formData()
+        slide()
     }
     // 공통
 
@@ -121,6 +125,34 @@ function gallery(){
     })
 }
 
+function slide(){
+    let ulWidth = $('.page').width();
+    $('.page:last').prependTo('#skillView')
+    $('#skillView').css('margin-left','-'+ulWidth+'px')
+    let srt;
+
+    $('#next').on('click',function(e){
+        $('#prev,#next').hide();
+      $('#skillView').animate({marginLeft:'-='+ulWidth+'px'},
+      function(){
+        $('.page:first').appendTo('#skillView')
+        $('#skillView').css('margin-left','-'+ulWidth+'px')
+        $('#prev,#next').show();
+      }
+      )
+    })
+    $('#prev').on('click',function(e){
+        $('#prev,#next').hide();
+      $('#skillView').animate({marginLeft:'+='+ulWidth+'px'},
+      function(){
+        $('.page:first').appendTo('#skillView')
+        $('#skillView').css('margin-left','-'+ulWidth+'px')
+        $('#prev,#next').show();
+      }
+      )
+    })
+}
+
 function formData(){
     // 모바일 설정. 
     // placeholder
@@ -154,8 +186,10 @@ function header(){
             else{
                     $('header').css('display','block')
                 }
+
     })
 }
+
 
 
 
@@ -191,7 +225,7 @@ content.innerHTML = this.text;
 }
 // 인스턴스(6개)
 let myModal = [
-    new Modal('title1','./images/java.png','2022','프로그램1','http://aaa1.com','내용1'),
+    new Modal('title1','./images/java.png','2022','프로그램1','https://jisoo-portfolio-webtoon.s3.ap-northeast-2.amazonaws.com/index.html','내용1'),
     new Modal('title2','./images/intelliJ.png','2022','프로그램2','http://aaa2.com','내용2'),
     new Modal('title3','./images/springboot.png','2022','프로그램3','http://aaa3.com','내용3'),
     new Modal('title4','./images/react','2022','프로그램4','http://aaa4.com','내용4'),

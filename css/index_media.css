@@ -1,4 +1,4 @@
-/* 1160 */
+/* desktop 1160 */
 @media screen and (min-width:1160px){
   article>div{
     width:1160px;
@@ -9,14 +9,15 @@
     width:1160px; }
 }
 
-@media screen and (min-width:980px) and (max-width:1159px){
+/* @media screen and (min-width:980px) and (max-width:1159px){
   #box01>ul{
     width:100%;
     margin-left:-50%;
   }
   header>div>h1{margin-left: 100px;}
-}
-/* 980 : 42 */
+} */
+
+/* 980 : 580 */
 @media screen and (min-width:580px) and (max-width:979px){
 /*  */
 article h3{
@@ -108,7 +109,7 @@ margin: 0 auto 25px;
 #box02 section.info>ul{
   width:59.994vw/* 732px */;
   margin: 0 auto;
-  background-color:pink;
+  /* background-color:pink; */
   /* background-color:#666; */
   }
   #box02 section.info>ul>li{
@@ -225,6 +226,7 @@ form p>input{
 /* 580 */
 @media screen and (max-width:579px){
   /* 공통 */
+  
   article{
     padding:50px 0;
   }
@@ -354,6 +356,7 @@ margin: 0 auto;
 #box03>h3{
   width:90vw;
   margin: 0 auto 28px;}
+
 #gallery{
   width:100%;
   position:relative;}
@@ -366,15 +369,28 @@ p.next{
   width:60vw;
   margin: 0 auto;
   overflow:hidden;
+  
 }
 #all{
-  width:360vw;}
+  width:360vw;
+}
 #all>figure{
   width:60vw;
-  margin-bottom:0;}
+  margin-bottom:0;
+  
+}
 #all>figure>img{
   width:100%;
-  border-radius:0;}
+  border-radius:50%;
+  
+}
+#all>figure>img:hover{
+  width:80%;
+  border-radius:50%;
+  transform:scale(1);            /* 이미지 확대 */
+  transition:none; 	/*  시간 설정  */
+  box-shadow:  0 2px 3px rgba(22, 22, 227, 0.624);
+}
   form{
     width:80vw;
     padding-right:0;
@@ -409,6 +425,7 @@ p.next{
 #submenu{display:none;}
 #top{display:none;}
 }
+
 
 @media screen and (max-width:980px){
  #modal{
