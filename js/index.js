@@ -226,10 +226,10 @@ content.innerHTML = this.text;
 // 인스턴스(6개)
 let myModal = [
     new Modal('title1','./images/java.png','2022','프로그램1','https://jisoo-portfolio-webtoon.s3.ap-northeast-2.amazonaws.com/index.html','내용1'),
-    new Modal('title2','./images/intelliJ.png','2022','프로그램2','http://aaa2.com','내용2'),
-    new Modal('title3','./images/springboot.png','2022','프로그램3','http://aaa3.com','내용3'),
-    new Modal('title4','./images/react','2022','프로그램4','http://aaa4.com','내용4'),
-    new Modal('title5','./images/nodeJs.png','2022','프로그램5','http://aaa5.com','내용5'),
+    new Modal('title2','./images/intelliJ.png','2022','프로그램2','http://jisoo-game-dice.s3-website.ap-northeast-2.amazonaws.com','내용2'),
+    new Modal('title3','./images/springboot.png','2022','프로그램3','http://jisoo-portfolio-booking.s3-website.ap-northeast-2.amazonaws.com','내용3'),
+    new Modal('title4','./images/react','2022','프로그램4','http://jisoo-portfolio-tway.s3-website.ap-northeast-2.amazonaws.com','내용4'),
+    new Modal('title5','./images/nodeJs.png','2022','프로그램5','http://jisoo-portfolio-kurly.s3-website.ap-northeast-2.amazonaws.com','내용5'),
     new Modal('title6','./images/vsc.png','2022','프로그램6','http://aaa6.com','내용6')
 ]
 
