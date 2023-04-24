@@ -86,7 +86,7 @@ function submenu(){
         return false // 낮은버전에 문제 생길까바 해주는
     })
     $('#submenu li>a').on('mousedown',function(e){
-        $(this).css('background-color','rgba(22, 22, 227, 0.624)')
+        $(this).css('background-color','rgba(82, 82, 236, 0.688)')
     }).on('mouseup',function(e){
         $(this).css('background-color','#fff')
     })

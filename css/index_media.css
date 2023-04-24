@@ -45,7 +45,7 @@ article h3{
     left:-400px; top:0;
     width:400px;
     height:100%;
-    background-color:rgba(21, 2, 23, 0.9);
+    background-color:rgba(4, 16, 85, 0.788);
     padding-top:25vh;
     box-sizing:border-box;
   }
@@ -61,7 +61,7 @@ article h3{
     text-align:center;
   }
   nav>ul>li>a{
-    font-size:20px;
+    font-size: 30px;
     line-height:12.5vh;
  
   }
@@ -154,7 +154,31 @@ margin: 0 auto 25px;
       width:148px;
     }
 
-/*  */   
+/* box02-1 */
+
+#box02-1{
+  
+}
+#box02-1>div{
+  display: block;
+}
+#box02-1>h3{
+  text-align: center;
+}
+#ex{
+  width: 100vw;
+  text-align: center;
+  margin-bottom: 0px;
+}
+#ex>p{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+#skillAll{
+  padding: 0;
+  margin-left: 50px;
+}
+/* box03 */   
 #box03{
   padding-bottom:70px;
 }     
@@ -436,7 +460,9 @@ p.next{
   position:absolute;
   width:5vw; height:5vw;
   right:2.5vw; top:1.665vh;
-  background-color:red;}
+  background-color:#fff;
+  border-radius: 50%;
+}
 #modal>section{
   position:static;
   width:auto;
