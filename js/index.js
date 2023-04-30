@@ -210,7 +210,11 @@ function header(){
     })
 }
 
-
+setInterval(function () {
+	$('.click').animate({'opacity': 0} ,500 , function () {
+		$('.click').animate({'opacity': 0.5}, 500);
+	});
+}, 1000);
 
 
 // DOM object

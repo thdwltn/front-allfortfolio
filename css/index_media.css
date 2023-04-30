@@ -388,12 +388,18 @@ margin: 0 auto;
 #box03>h3{
   width:90vw;
   margin: 0 auto 28px;}
+  #box03 .click>img{
+    width: 30px;
+    left: 70%; top: 20%;
+  }
 
 #gallery1{
   width:100%;
   position:relative;}
 p.prev{
-  display:block;}
+  display:block;
+  
+}
 p.next{
   display:block;
   top:30vw;}
@@ -460,6 +466,16 @@ p.next{
 
 
 @media screen and (max-width:980px){
+  #box03 .click>img{
+    width: 40px;
+    left: 62%; top: 30%;
+  }
+  p.prev{
+  top:62%;
+  }
+  p.next{
+  top:58%;
+  }
  #modal{
   /* display:block; */
   padding:6.66vh 5vw 3.333vh;
