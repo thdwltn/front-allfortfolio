@@ -374,6 +374,14 @@ margin: 0 auto;
   /* width:148px; */}
 #box02 section.skill>ul>li>span{
 }
+/* box02-1 */
+#ex>h4{
+  text-align: center;
+}
+#ex>p{
+  text-align: center;
+}
+
 /* box03 */
 #box03{
   padding-bottom:50px;}
@@ -381,7 +389,7 @@ margin: 0 auto;
   width:90vw;
   margin: 0 auto 28px;}
 
-#gallery{
+#gallery1{
   width:100%;
   position:relative;}
 p.prev{

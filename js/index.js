@@ -10,6 +10,8 @@ $(function(){
         top()
         // header()
         slide()
+        gallerySlide1()
+        gallerySlide2()
     }
     else if(windowW < 1160 && windowW >=980){
         nav()
@@ -125,6 +127,24 @@ function gallery(){
     })
 }
 
+
+function gallerySlide2(){
+    $('#box03>ul>li:last-child').on('click',function(e){
+        $('#gallery1').css('display','none')
+        $('#gallery2').css('display','block')
+        $('#box03>ul>li:last-child').css({color:'red',fontSize:'18px',fontWeight: 'bold'})
+        $('#box03>ul>li:first-child').css({color:'#666',fontSize:'100%'})
+    })
+}
+function gallerySlide1(){
+    $('#box03>ul>li:first-child').on('click',function(e){
+        $('#gallery1').css('display','block')
+        $('#gallery2').css('display','none')
+        $('#box03>ul>li:first-child').css({color:'red',fontSize:'18px',fontWeight: 'bold'})
+        $('#box03>ul>li:last-child').css({color:'#666',fontSize:'100%'})
+    })
+}
+
 function slide(){
     let ulWidth = $('.page').width();
     $('.page:last').prependTo('#skillView')
@@ -225,12 +245,12 @@ content.innerHTML = this.text;
 }
 // 인스턴스(6개)
 let myModal = [
-    new Modal('title1','./images/java.png','2022','프로그램1','https://jisoo-portfolio-webtoon.s3.ap-northeast-2.amazonaws.com/index.html','내용1'),
-    new Modal('title2','./images/intelliJ.png','2022','프로그램2','http://jisoo-game-dice.s3-website.ap-northeast-2.amazonaws.com','내용2'),
-    new Modal('title3','./images/springboot.png','2022','프로그램3','http://jisoo-portfolio-booking.s3-website.ap-northeast-2.amazonaws.com','내용3'),
-    new Modal('title4','./images/react','2022','프로그램4','http://jisoo-portfolio-tway.s3-website.ap-northeast-2.amazonaws.com','내용4'),
-    new Modal('title5','./images/nodeJs.png','2022','프로그램5','http://jisoo-portfolio-kurly.s3-website.ap-northeast-2.amazonaws.com','내용5'),
-    new Modal('title6','./images/vsc.png','2022','프로그램6','http://aaa6.com','내용6')
+    new Modal('title1','./images/pic01.png','2022','프로그램1','https://jisoo-portfolio-webtoon.s3.ap-northeast-2.amazonaws.com/index.html','웹툰사이트'),
+    new Modal('title2','./images/pic02.png','2022','프로그램2','http://jisoo-game-dice.s3-website.ap-northeast-2.amazonaws.com','주사위 게임'),
+    new Modal('title3','./images/pic03.png','2022','프로그램3','http://jisoo-portfolio-booking.s3-website.ap-northeast-2.amazonaws.com','부킹닷컴'),
+    new Modal('title4','./images/pic04.png','2023','프로그램4','http://jisoo-portfolio-tway.s3-website.ap-northeast-2.amazonaws.com','티웨이'),
+    new Modal('title5','./images/pic01.png','2023','프로그램5','http://jisoo-portfolio-kurly.s3-website.ap-northeast-2.amazonaws.com','마켓컬리'),
+    new Modal('title6','./images/pic02.png','2023','프로그램6','https://next-webtoon-0320.vercel.app/','웹툰가이드')
 ]
 
 // event => 작업 -> click -> figure>img, #modal>.close 
